@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
 
@@ -15,7 +14,6 @@ jobs:
       packages: write
 
     steps:
-
       - name: Get code
         uses: actions/checkout@v4
 
@@ -28,12 +26,8 @@ jobs:
 
       - name: Build image
         run: |
-          docker build \
-            -t ghcr.io/maggich/my-app:latest \
-            .
+          docker build -t ghcr.io/maggich/linux-registry:latest .
 
       - name: Push image
         run: |
-          docker push ghcr.io/maggich/my-app:latest
-
-
+          docker push ghcr.io/maggich/linux-registry:latest
