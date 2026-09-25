@@ -26,8 +26,8 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t ghcr.io/maggich/linux-registry:latest .
+          docker build -t ghcr.io/maggich/my-app:latest .
 
       - name: Push image
         run: |
-          docker push ghcr.io/maggich/linux-registry:latest
+          docker push ghcr.io/maggich/my-app:latest
